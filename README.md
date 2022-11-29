@@ -4,7 +4,7 @@
 
 Detetction of Cigarette Butts using Semantic Segmentation (Yolact)
 
-Cigarette butts are poisoning shoreline animals. We aim to use ML to identify and detect where the cigartte butts are present.
+Cigarette butts are poisoning shoreline animals. We aim to use ML to identify and detect and locate the cigartte butts.
 Out future plan is to build a bot on which this ML algo will run inorder to pick up waste near oceans, gutter, land etc.
 As a first step, we aim to build the ML aolution to detect and idenitfy cigarette butts. 
 
@@ -12,7 +12,7 @@ As a first step, we aim to build the ML aolution to detect and idenitfy cigarett
 
 > ⚠️ This step requires GPU. This model was trained on HPC.
 > We faced memory issues when trained locally and it takes too long to converge. 
-> ** Recommend to do this on HPC. **
+** Highly recommend to train the model on HPC. **
 
 1. This setup is done using conda env, you can use pip too.
 

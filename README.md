@@ -10,9 +10,19 @@ As a first step, we aim to build the ML aolution to detect and idenitfy cigarett
 
 ### Dataset 
 
-We have used the [Cigarette Butts Dataset](https://www.immersivelimit.com/datasets/cigarette-butts) and augmented with images from the internet of cigarette butts to improve the model.
+We have used the [Cigarette Butts Dataset](https://www.immersivelimit.com/datasets/cigarette-butts) and augmented to improve the model.
+1. Additional images from the internet of cigarette butts
+2. Took a cigartte butt and took photos of it 
+
 
 ### Annote dataset
+
+1. Clone the COCO Annotator froom [github](https://github.com/jsbroks/coco-annotator)
+2. Annote and images and export the COCO annotation file
+3. Add these annotations to the existing annotation file in `cig_butts/train` folder
+
+![image](https://user-images.githubusercontent.com/98665151/204422071-aa14ac54-a2b0-43ff-bf02-bf83c347fcb6.png)
+
 
 ### Environment and Config  
 

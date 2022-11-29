@@ -1,6 +1,12 @@
 # CMPE258
-CMPE258 - Term Project
 
+### Idea
+
+Detetction of Cigarette Butts using Semantic Segmentation (Yolact)
+
+Cigarette butts are poisoning shoreline animals. We aim to use ML to identify and detect where the cigartte butts are present.
+Out future plan is to build a bot on which this ML algo will run inorder to pick up waste near oceans, gutter, land etc.
+As a first step, we aim to build the ML aolution to detect and idenitfy cigarette butts. 
 
 ### Environment Setup
 

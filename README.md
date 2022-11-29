@@ -8,7 +8,7 @@ Cigarette butts are poisoning shoreline animals. We aim to use ML to identify an
 Out future plan is to build a bot on which this ML algo will run inorder to pick up waste near oceans, gutter, land etc.
 As a first step, we aim to build the ML aolution to detect and idenitfy cigarette butts. 
 
-### Environment Setup
+### Environment and Config  
 
 > ⚠️ This step requires GPU. This model was trained on HPC.
 > We faced memory issues when trained locally and it takes too long to converge. 
@@ -26,14 +26,13 @@ conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 ```
 
 
-
-
 2. Clone the yolact repository 
 ```
 git clone https://github.com/dbolya/yolact
 ```
 
 3. Download the dataset from the [Drive Link](https://drive.google.com/drive/u/0/folders/1o9hCcc947dXmdZxKSu9VoJ5s4mgs_-g4) and place it at the same path as the train.py folder
+
 
 4. Go to the config file `yolact/data/config.py`
 5. Add the **dataset details** in the config under `# ----------------------- DATASETS ----------------------- #` 
@@ -65,17 +64,22 @@ yolact_resnet50_cig_butts_config = yolact_resnet50_config.copy({
 
 ```
 
-6. Download the pretrained weights - here we are using [Resnet50](https://drive.google.com/file/d/1Jy3yCdbatgXa5YYIdTCRrSV0S9V5g1rn/view?usp=sharing) and store in in the `weights/` directory. If you are training the model for the first time, you will need to create this weights directory. 
+### Training
 
-7. Train the model 
+This model was trained this on top of a pretrained Resnet model that was trained on COCO dataset.
+
+#### Steps 
+
+1. Download the pretrained weights - here we are using [Resnet50](https://drive.google.com/file/d/1Jy3yCdbatgXa5YYIdTCRrSV0S9V5g1rn/view?usp=sharing) and store in in the `weights/` directory. If you are training the model for the first time, you will need to create this weights directory. 
+
+2. Train the model 
 ```
 python ./train.py --config=yolact_resnet50_cig_butts_config
 ```
 
-8. You can interrupt the model training once you are satisfies with the mAP score. (Press Ctrl+C to interrupt model). After training you can find the model at `weights/`. It will follow the naming convention that you configured in Step 6 `yolact_resnet50_cig_butts_x_x_interrupt.pth`
+3. You can interrupt the model training once you are satisfies with the mAP score. (Press Ctrl+C to interrupt model). After training you can find the model at `weights/`. It will follow the naming convention that you configured in Step 6 `yolact_resnet50_cig_butts_x_x_interrupt.pth`
 
 
-### Train
 
 
 ### Validation 

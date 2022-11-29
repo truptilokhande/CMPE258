@@ -28,15 +28,15 @@ conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 
 
 
-1. Clone the yolact repository 
+2. Clone the yolact repository 
 ```
 git clone https://github.com/dbolya/yolact
 ```
 
-2. Download the dataset from the [Drive Link](https://drive.google.com/drive/u/0/folders/1o9hCcc947dXmdZxKSu9VoJ5s4mgs_-g4) and place it at the same path as the train.py folder
+3. Download the dataset from the [Drive Link](https://drive.google.com/drive/u/0/folders/1o9hCcc947dXmdZxKSu9VoJ5s4mgs_-g4) and place it at the same path as the train.py folder
 
-3. Go to the config file `yolact/data/config.py`
-4. Add the **dataset details** in the config under `# ----------------------- DATASETS ----------------------- #` 
+4. Go to the config file `yolact/data/config.py`
+5. Add the **dataset details** in the config under `# ----------------------- DATASETS ----------------------- #` 
 
 ```
 cig_butts_dataset = dataset_base.copy({
@@ -50,7 +50,7 @@ cig_butts_dataset = dataset_base.copy({
 })
 
 ```
-5. Add the config for the model under `# ----------------------- YOLACT v1.0 CONFIGS ----------------------- #
+6. This step configures the model, add the below script under `# ----------------------- YOLACT v1.0 CONFIGS ----------------------- #
 `
 
 ```
@@ -65,7 +65,15 @@ yolact_resnet50_cig_butts_config = yolact_resnet50_config.copy({
 
 ```
 
-6. 
+6. Download the pretrained weights - here we are using [Resnet50](https://drive.google.com/file/d/1Jy3yCdbatgXa5YYIdTCRrSV0S9V5g1rn/view?usp=sharing) and store in in the `weights/` directory. If you are training the model for the first time, you will need to create this weights directory. 
+
+7. Train the model 
+```
+python ./train.py --config=yolact_resnet50_cig_butts_config
+```
+
+8. You can interrupt the model training once you are satisfies with the mAP score. (Press Ctrl+C to interrupt model). After training you can find the model at `weights/`. It will follow the naming convention that you configured in Step 6 `yolact_resnet50_cig_butts_x_x_interrupt.pth`
+
 
 ### Train
 

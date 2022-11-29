@@ -24,7 +24,7 @@ Link to [Colab evalutaion notebook](https://colab.research.google.com/drive/1kq2
 ```
 video="PXL_20221128_181428548.mp4"
 ```
-3. Run the eval script for the image. The `video` parameter takes both input and output in the format of `input video path: output video path`
+3. Run the eval script for the image. The `video` parameter takes both input and output in the format of `input_video_path:output_video_path`
 
 For example 
 

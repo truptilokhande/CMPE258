@@ -65,7 +65,8 @@ cig_butts_dataset = dataset_base.copy({
 })
 
 ```
-6. This step configures the model, add the below script under `# ----------------------- YOLACT v1.0 CONFIGS ----------------------- #
+6. This step configures the model, add the below script under 
+`# ----------------------- YOLACT v1.0 CONFIGS ----------------------- #
 `
 
 ```

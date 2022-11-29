@@ -8,6 +8,12 @@ Cigarette butts are poisoning shoreline animals. We aim to use ML to identify an
 Out future plan is to build a bot on which this ML algo will run inorder to pick up waste near oceans, gutter, land etc.
 As a first step, we aim to build the ML aolution to detect and idenitfy cigarette butts. 
 
+### Dataset 
+
+We have used the [Cigarette Butts Dataset](https://www.immersivelimit.com/datasets/cigarette-butts) and augmented with images from the internet of cigarette butts to improve the model.
+
+### Annote dataset
+
 ### Environment and Config  
 
 > ⚠️ This step requires GPU. This model was trained on HPC.

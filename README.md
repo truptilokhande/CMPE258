@@ -2,9 +2,64 @@
 CMPE258 - Term Project
 
 
-### Setup 
+### Environment Setup
+
+> ⚠️ This step requires GPU. This model was trained on HPC.
+> We faced memory issues when trained locally and it takes too long to converge. 
+> ** Recommend to do this on HPC. **
+
+1. This setup is done using conda env, you can use pip too.
+
+Incase you are facing an error in setting up and are you on *windows*, make sure to install Visual C++ 2015 build tools first. Else pycocotools will not install. If you are setting up on HPC, skip this step.
+
+```
+conda create -n env
+conda activate env
+pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+```
 
 
+
+
+1. Clone the yolact repository 
+```
+git clone https://github.com/dbolya/yolact
+```
+
+2. Download the dataset from the [Drive Link](https://drive.google.com/drive/u/0/folders/1o9hCcc947dXmdZxKSu9VoJ5s4mgs_-g4) and place it at the same path as the train.py folder
+
+3. Go to the config file `yolact/data/config.py`
+4. Add the **dataset details** in the config under `# ----------------------- DATASETS ----------------------- #` 
+
+```
+cig_butts_dataset = dataset_base.copy({
+  'name': 'Cig Butts',
+  'train_info': 'cig_butts/train/coco_annotations.json',
+  'train_images': 'cig_butts/train/images/',
+  'valid_info': 'cig_butts/val/coco_annotations.json',
+  'valid_images': 'cig_butts/val/images/',
+  'class_names': ('cig_butt'),
+  'label_map': { 1:  1 }
+})
+
+```
+5. Add the config for the model under `# ----------------------- YOLACT v1.0 CONFIGS ----------------------- #
+`
+
+```
+yolact_resnet50_cig_butts_config = yolact_resnet50_config.copy({
+    'name': 'yolact_plus_resnet50_cig_butts',
+    'dataset': cig_butts_dataset,
+    'num_classes': len(cig_butts_dataset.class_names) + 1,
+
+    # Image Size
+    'max_size': 512,
+})
+
+```
+
+6. 
 
 ### Train
 

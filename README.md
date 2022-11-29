@@ -2,23 +2,23 @@
 
 ### Idea
 
-Detetction of Cigarette Butts using Semantic Segmentation (Yolact)
+Detection of Cigarette Butts using Semantic Segmentation (Yolact)
 
-Cigarette butts are poisoning shoreline animals. We aim to use ML to identify and detect and locate the cigartte butts.
-Out future plan is to build a bot on which this ML algo will run inorder to pick up waste near oceans, gutter, land etc.
-As a first step, we aim to build the ML aolution to detect and idenitfy cigarette butts. 
+Cigarette butts are poisoning shoreline animals. We aim to use ML to identify, detect and locate the cigarette butts.
+Our future plan is to build a bot on which this ML algo will run inorder to pick up waste near oceans, gutter, land etc.
+As a first step, we aim to build the ML solution to detect and identify cigarette butts. 
 
 ### Dataset 
 
 We have used the [Cigarette Butts Dataset](https://www.immersivelimit.com/datasets/cigarette-butts) and augmented to improve the model.
 1. Additional images from the internet of cigarette butts
-2. Took a cigartte butt and took photos of it 
+2. Took a cigarette butt and took photos of it 
 
 
-### Annote dataset
+### Annotate dataset
 
 1. Clone the COCO Annotator froom [github](https://github.com/jsbroks/coco-annotator)
-2. Annote and images and export the COCO annotation file
+2. Annotate and images and export the COCO annotation file
 3. Add these annotations to the existing annotation file in `cig_butts/train` folder
 
 ![image](https://user-images.githubusercontent.com/98665151/204422071-aa14ac54-a2b0-43ff-bf02-bf83c347fcb6.png)
@@ -103,7 +103,7 @@ python ./train.py --config=yolact_resnet50_cig_butts_config
 
 > ⚠️ This step requires GPU too, this can be done on HPC/ Colab.
 
-Link to [Colab evalutaion notebook](https://colab.research.google.com/drive/1kq2hs-tSiPx0x6MoPA0X5xLYip2UOUH2?usp=sharing)
+Link to [Colab evaluation notebook](https://colab.research.google.com/drive/1kq2hs-tSiPx0x6MoPA0X5xLYip2UOUH2?usp=sharing)
 
 #### Steps 
 

@@ -40,3 +40,10 @@ The same syntax can be done for image too. Replace --video with `--image=inputpa
 
 
 ### Results 
+
+Butts scattered on ground and pine shavings along with other trash
+
+![image](https://user-images.githubusercontent.com/98665151/204408350-69946f55-89b6-4a9c-b70b-d36ca22bdcf0.png)
+
+![image](https://user-images.githubusercontent.com/98665151/204408631-fae4a905-4e6b-4745-b10b-bf64745899ce.png)
+
